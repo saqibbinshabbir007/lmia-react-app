@@ -29,7 +29,7 @@ const Banner = () => {
             A coaching and strategy program designed to teach foreign workers how to independently search for jobs, approach employers, and understand the Canadian hiring process.
           </p>
           <div className="btn-box">
-            <Link to="/contact" className="theme-btn btn-two">
+            <Link to="/enrollment" className="theme-btn btn-two">
               <span>Join the Coaching Program</span>
             </Link>
           </div>

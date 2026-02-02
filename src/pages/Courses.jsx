@@ -1,12 +1,77 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { CheckCircle, BookOpen, Users, Clock, ChevronDown } from 'lucide-react';
 import './Courses.css';
 
 const Courses = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCourse, setSelectedCourse] = useState(0);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const hasInitialized = useRef(false);
+
+  // Check for module parameter in URL on mount
+  useEffect(() => {
+    const moduleParam = searchParams.get('module');
+    if (moduleParam !== null) {
+      const moduleIndex = parseInt(moduleParam, 10);
+      if (!isNaN(moduleIndex) && moduleIndex >= 0 && moduleIndex < 11) {
+        setSelectedCourse(moduleIndex);
+        // Scroll to content after a short delay to ensure page is loaded
+        setTimeout(() => {
+          const contentElement = document.querySelector('.courses-content-area');
+          if (contentElement) {
+            contentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      }
+    }
+  }, [searchParams]);
+
+  // Scroll to top when module changes
+  useEffect(() => {
+    // Skip scroll on initial mount
+    if (!hasInitialized.current) {
+      hasInitialized.current = true;
+      return;
+    }
+
+    // Scroll to top of the content area when selectedCourse changes
+    const scrollToTop = () => {
+      // Try to find the content area first
+      const contentArea = document.querySelector('.courses-content-area');
+      if (contentArea) {
+        const rect = contentArea.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const targetPosition = rect.top + scrollTop - 100; // 100px offset for header
+
+        window.scrollTo({
+          top: Math.max(0, targetPosition),
+          behavior: 'smooth'
+        });
+      } else {
+        // Fallback: scroll to main section
+        const mainSection = document.querySelector('.courses-main-section');
+        if (mainSection) {
+          const rect = mainSection.getBoundingClientRect();
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const targetPosition = rect.top + scrollTop - 100;
+
+          window.scrollTo({
+            top: Math.max(0, targetPosition),
+            behavior: 'smooth'
+          });
+        } else {
+          // Final fallback: scroll to top of page
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Delay to ensure DOM is updated with new content
+    const timer = setTimeout(scrollToTop, 300);
+    return () => clearTimeout(timer);
+  }, [selectedCourse]);
 
   // Close dropdown when clicking outside
   useEffect(() => {

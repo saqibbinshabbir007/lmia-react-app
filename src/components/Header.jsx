@@ -152,7 +152,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="btn-box">
-                <Link to="/contact" className="theme-btn btn-one">
+                <Link to="/courses" className="theme-btn btn-one">
                   <span
                     style={{
                       display: "flex",
@@ -214,7 +214,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="btn-box">
-                <Link to="/contact" className="theme-btn btn-one">
+                <Link to="/courses" className="theme-btn btn-one">
                   <span
                     style={{
                       display: "flex",
@@ -273,7 +273,7 @@ const Header = () => {
             </ul>
           </div>
           <div className="mobile-menu-btn">
-            <Link to="/contact" className="theme-btn btn-one" onClick={closeMobileMenu}>
+            <Link to="/courses" className="theme-btn btn-one" onClick={closeMobileMenu}>
               <span
                 style={{
                   display: "flex",
