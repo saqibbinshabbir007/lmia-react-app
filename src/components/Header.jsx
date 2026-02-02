@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Mail,
@@ -18,6 +18,8 @@ const Header = () => {
   const [videoDropdownOpen, setVideoDropdownOpen] = useState(false);
   const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const videoDropdownRefMain = useRef(null);
+  const videoDropdownRefSticky = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -99,6 +101,27 @@ const Header = () => {
       document.body.style.width = '';
     };
   }, [videoModalOpen]);
+
+  // Close video dropdown when clicking outside — use 'click' so sub-list link click fires first (video opens)
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      const insideMain = videoDropdownRefMain.current?.contains(e.target);
+      const insideSticky = videoDropdownRefSticky.current?.contains(e.target);
+      if (!insideMain && !insideSticky) {
+        setVideoDropdownOpen(false);
+      }
+    };
+    if (videoDropdownOpen) {
+      document.addEventListener("click", handleClickOutside);
+    }
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [videoDropdownOpen]);
+
+  const toggleVideoDropdown = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setVideoDropdownOpen((prev) => !prev);
+  };
 
   return (
     <>
@@ -188,25 +211,23 @@ const Header = () => {
                       <li className={isActive("/enrollment") ? "current" : ""}>
                         <Link to="/enrollment">Enrollment</Link>
                       </li>
-                      <li 
-                        className="dropdown"
-                        onMouseEnter={() => setVideoDropdownOpen(true)}
-                        onMouseLeave={() => setVideoDropdownOpen(false)}
-                      >
-                        <a href="#watch-video" onClick={(e) => e.preventDefault()}>
-                          Watch Video <ChevronDown size={16} style={{ marginLeft: '5px', display: 'inline-block', verticalAlign: 'middle' }} />
+                      <li className={`dropdown ${videoDropdownOpen ? "open" : ""}`} ref={videoDropdownRefMain}>
+                        <a href="#watch-video" onClick={toggleVideoDropdown}>
+                          Watch Video <ChevronDown size={16} className="dropdown-chevron" style={{ marginLeft: '5px', display: 'inline-block', verticalAlign: 'middle' }} />
                         </a>
                         {videoDropdownOpen && (
                           <ul className="video-dropdown-menu">
                             <li>
                               <a href="#get-canadian-job" onClick={(e) => {
                                 e.preventDefault();
+                                e.stopPropagation();
                                 openVideoModal('get-canadian-job');
                               }}>Get A Canadian Job</a>
                             </li>
                             <li>
                               <a href="#why-hire-us" onClick={(e) => {
                                 e.preventDefault();
+                                e.stopPropagation();
                                 openVideoModal('why-hire-us');
                               }}>Why Hire Us</a>
                             </li>
@@ -276,25 +297,23 @@ const Header = () => {
                     <li className={isActive("/enrollment") ? "current" : ""}>
                       <Link to="/enrollment">Enrollment</Link>
                     </li>
-                    <li 
-                      className="dropdown"
-                      onMouseEnter={() => setVideoDropdownOpen(true)}
-                      onMouseLeave={() => setVideoDropdownOpen(false)}
-                    >
-                      <a href="#watch-video" onClick={(e) => e.preventDefault()}>
-                        Watch Video <ChevronDown size={16} style={{ marginLeft: '5px', display: 'inline-block', verticalAlign: 'middle' }} />
+                    <li className={`dropdown ${videoDropdownOpen ? "open" : ""}`} ref={videoDropdownRefSticky}>
+                      <a href="#watch-video" onClick={toggleVideoDropdown}>
+                        Watch Video <ChevronDown size={16} className="dropdown-chevron" style={{ marginLeft: '5px', display: 'inline-block', verticalAlign: 'middle' }} />
                       </a>
                       {videoDropdownOpen && (
                         <ul className="video-dropdown-menu">
                           <li>
                             <a href="#get-canadian-job" onClick={(e) => {
                               e.preventDefault();
+                              e.stopPropagation();
                               openVideoModal('get-canadian-job');
                             }}>Get A Canadian Job</a>
                           </li>
                           <li>
                             <a href="#why-hire-us" onClick={(e) => {
                               e.preventDefault();
+                              e.stopPropagation();
                               openVideoModal('why-hire-us');
                             }}>Why Hire Us</a>
                           </li>
@@ -458,6 +477,7 @@ const Header = () => {
                 <video
                   controls
                   autoPlay
+                  playsInline
                   style={{
                     position: 'absolute',
                     top: 0,
