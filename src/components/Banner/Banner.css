@@ -100,6 +100,17 @@
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.4;
+  /* Trick: use same image as MASK + fill with theme red = icons become solid red */
+  background-image: none !important;
+  background-color: var(--main-color);
+  -webkit-mask-image: url(/Banner/shape-39.png);
+  mask-image: url(/Banner/shape-39.png);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 .banner-style-three .pattern-layer .pattern-3 {
