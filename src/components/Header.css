@@ -281,9 +281,15 @@
 /* Header Lower */
 .header-lower {
   position: relative;
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   background: #F5F3F3;
   padding-left: 0;
+}
+
+.header-lower:hover {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .header-lower .logo-box {
@@ -658,7 +664,13 @@
 
 .header-style-two .header-lower .auto-container {
   padding: 0 102px;
-  max-width: 100%;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.header-style-two .header-lower .auto-container:hover {
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 .header-style-two .header-lower .outer-box {
@@ -666,7 +678,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.header-style-two .header-lower .outer-box:hover {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .header-style-two .header-lower .logo-box {
@@ -1029,5 +1047,208 @@
 @media (max-width: 991px) {
   .courses-dropdown-menu {
     display: none;
+  }
+}
+
+/* Video Dropdown Menu */
+.main-menu .navigation > li.dropdown {
+  position: relative;
+}
+
+.video-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 8px 0;
+  z-index: 1000;
+  margin-top: 10px;
+  list-style: none;
+  display: block;
+}
+
+.video-dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.video-dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--heebo);
+}
+
+.video-dropdown-menu li a:hover {
+  background: #f9fafb;
+  color: var(--main-color);
+}
+
+/* Responsive - Hide dropdown on mobile */
+@media (max-width: 1200px) {
+  .video-dropdown-menu {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 991px) {
+  .video-dropdown-menu {
+    display: none;
+  }
+}
+
+/* Video Modal Styles */
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.video-modal-content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.video-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.video-modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: rotate(90deg);
+}
+
+.video-modal-body {
+  padding: 30px;
+}
+
+.video-modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #CE1E22;
+  margin-bottom: 20px;
+  font-family: 'Maven Pro', sans-serif;
+  text-align: center;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: contain;
+}
+
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  color: #666;
+  text-align: center;
+  padding: 40px;
+}
+
+.video-placeholder p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Responsive Video Modal */
+@media (max-width: 768px) {
+  .video-modal-content {
+    max-width: 95%;
+    margin: 10px;
+  }
+
+  .video-modal-body {
+    padding: 20px;
+  }
+
+  .video-modal-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .video-modal-close {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
   }
 }

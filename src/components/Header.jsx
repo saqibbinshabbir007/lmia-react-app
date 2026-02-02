@@ -8,12 +8,16 @@ import {
   Globe,
   ArrowRight,
   X,
+  ChevronDown,
 } from "lucide-react";
 import "./Header.css";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [videoDropdownOpen, setVideoDropdownOpen] = useState(false);
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -55,6 +59,46 @@ const Header = () => {
   const isActive = (path) => {
     return location.pathname === path ? "current" : "";
   };
+
+  const openVideoModal = (videoType) => {
+    setSelectedVideo(videoType);
+    setVideoModalOpen(true);
+    setVideoDropdownOpen(false);
+    setMobileMenuOpen(false);
+    // Prevent background scroll
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+  };
+
+  const closeVideoModal = () => {
+    setVideoModalOpen(false);
+    setSelectedVideo(null);
+    // Restore scroll
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
+  };
+
+  // Prevent scroll when modal is open
+  useEffect(() => {
+    if (videoModalOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+
+    return () => {
+      // Cleanup on unmount
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, [videoModalOpen]);
 
   return (
     <>
@@ -144,6 +188,31 @@ const Header = () => {
                       <li className={isActive("/enrollment") ? "current" : ""}>
                         <Link to="/enrollment">Enrollment</Link>
                       </li>
+                      <li 
+                        className="dropdown"
+                        onMouseEnter={() => setVideoDropdownOpen(true)}
+                        onMouseLeave={() => setVideoDropdownOpen(false)}
+                      >
+                        <a href="#watch-video" onClick={(e) => e.preventDefault()}>
+                          Watch Video <ChevronDown size={16} style={{ marginLeft: '5px', display: 'inline-block', verticalAlign: 'middle' }} />
+                        </a>
+                        {videoDropdownOpen && (
+                          <ul className="video-dropdown-menu">
+                            <li>
+                              <a href="#get-canadian-job" onClick={(e) => {
+                                e.preventDefault();
+                                openVideoModal('get-canadian-job');
+                              }}>Get A Canadian Job</a>
+                            </li>
+                            <li>
+                              <a href="#why-hire-us" onClick={(e) => {
+                                e.preventDefault();
+                                openVideoModal('why-hire-us');
+                              }}>Why Hire Us</a>
+                            </li>
+                          </ul>
+                        )}
+                      </li>
                       <li className={isActive("/contact") ? "current" : ""}>
                         <Link to="/contact">Contact Us</Link>
                       </li>
@@ -207,6 +276,31 @@ const Header = () => {
                     <li className={isActive("/enrollment") ? "current" : ""}>
                       <Link to="/enrollment">Enrollment</Link>
                     </li>
+                    <li 
+                      className="dropdown"
+                      onMouseEnter={() => setVideoDropdownOpen(true)}
+                      onMouseLeave={() => setVideoDropdownOpen(false)}
+                    >
+                      <a href="#watch-video" onClick={(e) => e.preventDefault()}>
+                        Watch Video <ChevronDown size={16} style={{ marginLeft: '5px', display: 'inline-block', verticalAlign: 'middle' }} />
+                      </a>
+                      {videoDropdownOpen && (
+                        <ul className="video-dropdown-menu">
+                          <li>
+                            <a href="#get-canadian-job" onClick={(e) => {
+                              e.preventDefault();
+                              openVideoModal('get-canadian-job');
+                            }}>Get A Canadian Job</a>
+                          </li>
+                          <li>
+                            <a href="#why-hire-us" onClick={(e) => {
+                              e.preventDefault();
+                              openVideoModal('why-hire-us');
+                            }}>Why Hire Us</a>
+                          </li>
+                        </ul>
+                      )}
+                    </li>
                     <li className={isActive("/contact") ? "current" : ""}>
                       <Link to="/contact">Contact Us</Link>
                     </li>
@@ -264,6 +358,25 @@ const Header = () => {
                 <Link to="/enrollment" onClick={closeMobileMenu}>
                   Enrollment
                 </Link>
+              </li>
+              <li>
+                <a href="#watch-video" onClick={(e) => e.preventDefault()}>
+                  Watch Video
+                </a>
+                <ul style={{ paddingLeft: '20px', marginTop: '5px' }}>
+                  <li>
+                    <a href="#get-canadian-job" onClick={(e) => {
+                      e.preventDefault();
+                      openVideoModal('get-canadian-job');
+                    }}>Get A Canadian Job</a>
+                  </li>
+                  <li>
+                    <a href="#why-hire-us" onClick={(e) => {
+                      e.preventDefault();
+                      openVideoModal('why-hire-us');
+                    }}>Why Hire Us</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link to="/contact" onClick={closeMobileMenu}>
@@ -329,6 +442,46 @@ const Header = () => {
           </div>
         </nav>
       </div>
+
+      {/* Video Modal */}
+      {videoModalOpen && (
+        <div className="video-modal-overlay" onClick={closeVideoModal}>
+          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="video-modal-close" onClick={closeVideoModal}>
+              <X size={24} />
+            </button>
+            <div className="video-modal-body">
+              <h3 className="video-modal-title">
+                {selectedVideo === 'get-canadian-job' ? 'Get A Canadian Job' : 'Why Hire Us'}
+              </h3>
+              <div className="video-wrapper">
+                <video
+                  controls
+                  autoPlay
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain'
+                  }}
+                >
+                  <source
+                    src={
+                      selectedVideo === 'get-canadian-job'
+                        ? '/Video/Get-a-Canadian-Job-updated.mp4'
+                        : '/Video/why-hire-us-R3.mp4'
+                    }
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
