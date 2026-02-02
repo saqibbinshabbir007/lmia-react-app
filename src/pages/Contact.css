@@ -419,7 +419,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 100px;
+    width: 88px;
     height: 65px;
     z-index: 10;
 }
@@ -488,7 +488,16 @@
 }
 
 .cn-form-group.country-phone input {
-    padding-left: 115px !important;
+    padding-left: 98px !important;
+    padding-right: 16px !important;
+    text-align: left !important;
+    direction: ltr;
+    box-sizing: border-box;
+}
+
+.cn-form-group.country-phone input::placeholder {
+    text-align: left !important;
+    direction: ltr;
 }
 
 .dropdown-list {
@@ -523,12 +532,12 @@
 .dropdown-list li.selected { background: #CE1E22; color: #ffffff; }
 
 .cn-form-group.country-phone input {
-    padding-left: 105px !important;
+    padding-left: 98px !important;
 }
 
 @media (max-width: 767px) {
     .cn-form-group.country-phone input {
-        padding-left: 105px !important;
+        padding-left: 98px !important;
     }
 }
 

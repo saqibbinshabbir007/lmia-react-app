@@ -236,9 +236,13 @@ const Enrollment = () => {
         console.log('Payment successful:', details);
         console.log('Enrollment data:', formData);
         
-        alert('Payment successful! Your enrollment has been submitted. Our team will contact you within 24 hours to confirm your enrollment.');
+        // Show professional inline success message (no browser alert)
+        setTimeout(() => {
+            const successEl = document.querySelector('.enr-success-message');
+            if (successEl) successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
         
-        // Reset form after successful payment
+        // Reset form after user has seen the success message
         setTimeout(() => {
             setFormData({
                 firstName: '',
@@ -254,7 +258,7 @@ const Enrollment = () => {
             setErrors({});
             setFormValidated(false);
             setPaymentSuccess(false);
-        }, 3000);
+        }, 8000);
     };
 
     const handlePaymentError = (err) => {
@@ -297,6 +301,14 @@ const Enrollment = () => {
                 <div 
                     className="enr-shape-3" 
                     style={{ backgroundImage: 'url(/assets/images/shape/shape-52.png)' }}
+                ></div>
+                <div 
+                    className="enr-shape-70" 
+                    style={{ backgroundImage: 'url(/assets/images/shape/shape-70.png)' }}
+                ></div>
+                <div 
+                    className="enr-shape-36" 
+                    style={{ backgroundImage: 'url(/assets/images/shape/shape-36.png)' }}
                 ></div>
                 
                 <div className="auto-container">
@@ -456,7 +468,7 @@ const Enrollment = () => {
                                             <input 
                                                 type="text" 
                                                 name="whatsapp" 
-                                                placeholder="What's App Number *" 
+                                                placeholder="WhatsApp No. *" 
                                                 value={formData.whatsapp}
                                                 onChange={handleInputChange}
                                                 required 
@@ -553,9 +565,9 @@ const Enrollment = () => {
                                             </div>
                                         ) : (
                                             <div className="enr-success-message">
-                                                <CheckCircle size={48} color="#28a745" />
+                                                <CheckCircle size={48} />
                                                 <h4>Payment Successful!</h4>
-                                                <p>Your enrollment has been submitted. Our team will contact you within 24 hours.</p>
+                                                <p>Your enrollment has been submitted. Our team will contact you within 24 hours to confirm your enrollment.</p>
                                             </div>
                                         )}
                                     </div>

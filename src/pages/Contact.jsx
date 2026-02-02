@@ -281,7 +281,7 @@ const Contact = () => {
                                                 selectedCountry={selectedWACountry}
                                                 onSelect={setSelectedWACountry}
                                             />
-                                            <input type="text" name="whatsapp" placeholder="What's App Number *" required />
+                                            <input type="text" name="whatsapp" placeholder="WhatsApp No. *" required />
                                         </div>
                                     </div>
                                     

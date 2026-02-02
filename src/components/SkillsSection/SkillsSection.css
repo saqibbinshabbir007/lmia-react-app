@@ -2,10 +2,10 @@
 
 .sks-section {
     position: relative;
-    padding: 100px 0px 150px 0px; /* Reduced top padding */
+    padding: 42px 0px 58px 0px;
     background-color: #fff;
     margin-top: -120px; /* Overlap effect */
-    z-index: 10; /* Ensure it stays above the section above */
+    z-index: 10;
     overflow: hidden;
 }
 
@@ -17,6 +17,8 @@
     height: 466px;
     background-repeat: no-repeat;
     z-index: 1;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .sks-pattern-layer-3 {
@@ -29,17 +31,66 @@
     z-index: 0;
 }
 
-.sks-image-layer {
-    position: absolute;
-    right: 270px;
-    bottom: 100px;
+/* Layout: left text, right image */
+.sks-layout-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
     z-index: 2;
+}
+
+.sks-content-col {
+    flex: 1;
+    min-width: 0;
+}
+
+.sks-image-col {
+    flex-shrink: 0;
+    width: 45%;
+    max-width: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sks-image-wrap {
+    position: relative;
+    width: 100%;
+}
+
+/* Light pink/red decorative shape behind image (bottom-left) */
+.sks-image-shape-bg {
+    position: absolute;
+    left: -30px;
+    bottom: -25px;
+    width: 55%;
+    height: 70%;
+    min-height: 200px;
+    background: rgba(206, 30, 34, 0.08);
+    border-radius: 20px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sks-image-layer {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
 
 .sks-image-layer img {
     display: block;
     max-width: 100%;
+    max-height: 680px;
+    width: auto;
     height: auto;
+    object-fit: contain;
+    border-radius: 16px;
 }
 
 .sks-content-box {
@@ -194,10 +245,10 @@
 @media only screen and (max-width: 1600px) {
     .sks-section {
         margin-top: -110px;
-        padding: 90px 0 140px 0;
+        padding: 42px 0 56px 0;
     }
-    .sks-image-layer {
-        right: 120px;
+    .sks-image-col {
+        width: 42%;
         max-width: 420px;
     }
 }
@@ -206,14 +257,14 @@
 @media only screen and (max-width: 1440px) {
     .sks-section {
         margin-top: -100px;
-        padding: 80px 0 120px 0;
+        padding: 40px 0 52px 0;
     }
     .sks-sec-title h2 {
         font-size: 40px;
         line-height: 50px;
     }
-    .sks-image-layer {
-        right: 60px;
+    .sks-image-col {
+        width: 40%;
         max-width: 380px;
     }
 }
@@ -222,16 +273,15 @@
 @media only screen and (max-width: 1200px) {
     .sks-section {
         margin-top: -85px;
-        padding: 70px 0 100px 0;
+        padding: 38px 0 48px 0;
     }
     .sks-sec-title h2 {
         font-size: 36px;
         line-height: 46px;
     }
-    .sks-image-layer {
-        right: 20px;
+    .sks-image-col {
+        width: 38%;
         max-width: 340px;
-        bottom: 80px;
     }
 }
 
@@ -239,10 +289,13 @@
 @media only screen and (max-width: 1024px) {
     .sks-section {
         margin-top: -70px;
-        padding: 60px 20px 80px 20px;
+        padding: 36px 20px 44px 20px;
         text-align: left;
     }
-    .sks-image-layer {
+    .sks-layout-row {
+        flex-direction: column;
+    }
+    .sks-image-col {
         display: none;
     }
     .sks-content-box {
@@ -255,7 +308,7 @@
 @media only screen and (max-width: 768px) {
     .sks-section {
         margin-top: -50px;
-        padding: 40px 15px;
+        padding: 28px 15px 36px;
     }
     .sks-sec-title h2 {
         font-size: 30px;
@@ -283,6 +336,7 @@
 @media only screen and (max-width: 480px) {
     .sks-section {
         margin-top: -40px;
+        padding: 24px 15px 32px;
     }
     .sks-sec-title h2 {
         font-size: 26px;

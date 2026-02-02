@@ -61,7 +61,7 @@ const IncredibleDeal = () => {
                     </div>
 
                     <div className="btn-box">
-                        <Link to="/contact" className="theme-btn btn-one">
+                        <Link to="/enrollment" className="theme-btn btn-one">
                             <span>View Program Details</span>
                         </Link>
                     </div>

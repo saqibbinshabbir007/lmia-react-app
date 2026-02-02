@@ -16,7 +16,7 @@ import './App.css';
 
 // PayPal Client ID - Replace with your actual PayPal Client ID
 const initialPayPalOptions = {
-  clientId: "test", // Replace with your PayPal Client ID
+  clientId: "AedpuqKn9fKTF4VBBiQxp_R0eI2ejZUVcuYzLsxRw8KNIXuT960lA82HFIyuaQiXeV75AvtsccDogAqQ", //  Replace with your PayPal Client ID
   currency: "USD",
   intent: "capture",
 };
