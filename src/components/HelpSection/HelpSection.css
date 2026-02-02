@@ -1,0 +1,330 @@
+/* Help Section Specific Prefix: hs3- */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/assets/fonts/icomoon.eot?tin97q');
+  src:  url('/assets/fonts/icomoon.eot?tin97q#iefix') format('embedded-opentype'),
+    url('/assets/fonts/icomoon.ttf?tin97q') format('truetype'),
+    url('/assets/fonts/icomoon.woff?tin97q') format('woff'),
+    url('/assets/fonts/icomoon.svg?tin97q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icon Content Codes from template */
+.icon-42:before { content: "\e937"; }
+.icon-43:before { content: "\e938"; }
+.icon-44:before { content: "\e939"; }
+
+.hs3-section {
+  background: #CE1E22; /* Updated to brand red */
+  padding: 120px 0px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Pattern/Background Layers */
+.hs3-pattern-layer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hs3-pattern-layer .hs3-pattern-1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 627px;
+  height: 593px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0.9; /* Increased opacity for better visibility */
+  filter: brightness(0) invert(1) brightness(1.5); /* Boosted brightness for extra pop */
+}
+
+.hs3-pattern-layer .hs3-pattern-2 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 471px;
+  height: 510px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  -webkit-animation: hs3-zoom-fade 7s infinite linear;
+  animation: hs3-zoom-fade 7s infinite linear;
+  opacity: 0.9;
+  filter: brightness(0) invert(1) brightness(1.5);
+}
+
+.hs3-pattern-layer .hs3-pattern-3 {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.9;
+  filter: brightness(0) invert(1) brightness(1.5);
+}
+
+/* Section Title with Star Line */
+.hs3-sec-title {
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+
+.hs3-sec-title .hs3-sub-title {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  font-weight: 700;
+  padding-bottom: 25px; /* Space for the star line */
+  margin-top: 25px; /* Added margin-top to separate from H2 */
+  margin-bottom: 0px; /* Removed margin-bottom since it's now the last title element */
+  text-transform: none; /* Removed uppercase as requested */
+  letter-spacing: 1px;
+}
+
+.hs3-sec-title .hs3-sub-title:before {
+  position: absolute;
+  content: '';
+  background: #ffffff; /* Lines made pure white */
+  width: 97px;
+  height: 1px;
+  left: 0px;
+  bottom: 0px;
+}
+
+/* The Star Icon */
+.hs3-sec-title .hs3-sub-title:after {
+  position: absolute;
+  content: '\e90e'; /* Icomoon star */
+  font-family: 'icomoon';
+  font-size: 13px;
+  background: #CE1E22; /* Matched to section background to hide the cutout box */
+  width: 33px;
+  text-align: center;
+  color: #fff;
+  left: 32px;
+  bottom: -7px;
+}
+
+.hs3-sec-title h2 {
+  display: block;
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Maven Pro', sans-serif;
+  margin-bottom: 10px; /* Slight margin before sub-title */
+}
+
+/* Grid Layout for Horizontal Alignment */
+.hs3-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* Force 1 line on desktop */
+  justify-content: space-between;
+  margin: 50px -15px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hs3-column {
+  flex: 0 0 32%;
+  max-width: 32%;
+  padding: 0 15px;
+}
+
+.hs3-single-item {
+  position: relative;
+  display: block;
+}
+
+.hs3-inner-box {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Icon and Number Column on the left */
+.hs3-icon-box {
+  flex-shrink: 0;
+  width: 80px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The vertical line connecting items in a column if needed (from template) */
+.hs3-icon-box:before {
+  position: absolute;
+  content: '';
+  background: rgba(180, 196, 217, 0.1);
+  width: 1px;
+  height: 125px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.hs3-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  font-size: 65px;
+  color: #fff;
+  z-index: 2;
+}
+
+.hs3-count-text {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(180, 196, 217, 0.5);
+  z-index: 2;
+}
+
+/* Margin utilities */
+.mb_18 { margin-bottom: 18px; }
+.mt_18 { margin-top: 18px; }
+.mb_13 { margin-bottom: 13px; }
+.mb_60 { margin-bottom: 60px; }
+
+/* Text Content Column on the right */
+.hs3-text-box {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.hs3-text-box h3 {
+  display: block;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: 'Maven Pro', sans-serif;
+  color: #fff; /* Directly set color to white */
+}
+
+.hs3-text-box p {
+  font-size: 17px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Alternating Animation/Position for Step 2 */
+/* We already handled the order in JSX, but we can fine-tune if needed */
+
+/* Zoom-Fade Animation */
+@keyframes hs3-zoom-fade {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Responsive Implementation */
+@media (max-width: 1200px) {
+    .hs3-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hs3-column {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .hs3-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .hs3-sec-title h2 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hs3-sec-title {
+        text-align: center;
+    }
+    .hs3-sec-title .hs3-sub-title {
+        font-size: 15px;
+        padding-bottom: 30px;
+        line-height: 24px;
+    }
+    .hs3-sec-title .hs3-sub-title:before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hs3-sec-title .hs3-sub-title:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hs3-sec-title h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .hs3-inner-box {
+        flex-direction: column;
+        align-items: center; 
+        gap: 15px;
+        text-align: center;
+    }
+    .hs3-icon-box:before {
+        display: none; /* Hide connector on mobile stack */
+    }
+    .hs3-text-box {
+        width: 100%;
+        text-align: center;
+    }
+    .hs3-text-box h3 {
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .hs3-text-box p {
+        text-align: center;
+        font-size: 16px;
+    }
+}

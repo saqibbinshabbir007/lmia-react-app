@@ -1,0 +1,392 @@
+/* TeamSection.css - Updated with 'tm-' prefix and Fixed Icons */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/assets/fonts/icomoon.eot?tin97q');
+  src:  url('/assets/fonts/icomoon.eot?tin97q#iefix') format('embedded-opentype'),
+    url('/assets/fonts/icomoon.ttf?tin97q') format('truetype'),
+    url('/assets/fonts/icomoon.woff?tin97q') format('woff'),
+    url('/assets/fonts/icomoon.svg?tin97q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-4:before { content: "\e903"; } /* Facebook */
+.icon-5:before { content: "\e904"; } /* LinkedIn */
+.icon-6:before { content: "\e905"; } /* Twitter/X */
+.icon-26:before { content: "\e91f"; }
+
+.tm-section {
+  position: relative;
+  padding: 150px 0px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Header Styling */
+.tm-header {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 70px;
+  z-index: 2;
+}
+
+.tm-subtitle {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 26px;
+  color: #032B66;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  font-family: 'Maven Pro', sans-serif;
+  letter-spacing: 1px;
+}
+
+.tm-subtitle:before {
+  position: absolute;
+  content: '';
+  background: #B4C4D9;
+  width: 97px;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+}
+
+.tm-subtitle:after {
+  position: absolute;
+  content: '\e90e';
+  font-family: 'icomoon';
+  font-size: 13px;
+  background: #ffffff;
+  width: 33px;
+  text-align: center;
+  color: #B4C4D9;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -13px;
+}
+
+.tm-title {
+  display: block;
+  font-size: 44px;
+  line-height: 54px;
+  font-weight: 700;
+  color: #032B66;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+/* Grid Layout */
+.tm-row {
+  display: flex;
+  flex-wrap: wrap; /* Changed to wrap by default for safer responsiveness */
+  margin: 0 -15px;
+  justify-content: center;
+}
+
+.tm-col {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 15px;
+}
+
+/* The Card Design */
+.tm-card {
+  position: relative;
+  display: block;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 180px;
+  padding: 12px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 500ms ease;
+  margin-bottom: 30px; /* Space between cards when wrapped */
+}
+
+/* Sliding Hover Background */
+.tm-card:before {
+  position: absolute;
+  content: '';
+  background: #032B66;
+  width: 100%;
+  height: 0%;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  transition: all 500ms ease;
+  border-radius: 0 0 180px 180px;
+}
+
+.tm-card:hover:before {
+  height: 100%;
+  border-radius: 0;
+}
+
+.tm-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 45px rgba(3, 43, 102, 0.2);
+}
+
+.tm-img-area, 
+.tm-info {
+  position: relative;
+  z-index: 2;
+}
+
+.tm-img-area {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.tm-img-box {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.tm-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 500ms ease;
+}
+
+.tm-card:hover .tm-img-box img {
+    transform: scale(1.1);
+}
+
+/* Social Box */
+.tm-social-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+  z-index: 10;
+}
+
+.tm-social-trigger {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  color: #032B66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.tm-social-trigger i {
+    font-size: 20px;
+    font-style: normal;
+}
+
+.tm-social-list {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: bottom center;
+  bottom: 60px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 400ms ease;
+}
+
+.tm-social-box:hover .tm-social-list {
+  transform: translateX(-50%) scaleY(1);
+  bottom: 70px;
+}
+
+.tm-social-list li {
+    margin-bottom: 8px;
+}
+
+.tm-social-list li a {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    color: #032B66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 300ms ease;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.tm-social-list li a i {
+    font-size: 20px;
+    font-style: normal;
+}
+
+.tm-social-list li a:hover {
+    background: #032B66;
+    color: #ffffff;
+}
+
+.tm-card:hover .tm-social-trigger {
+    background: #5E789C;
+    color: #ffffff;
+}
+
+/* Info Area */
+.tm-info {
+  position: relative;
+  display: block;
+  padding: 45px 15px 55px 15px;
+}
+
+.tm-info h3 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+  color: #032B66;
+  margin-bottom: 5px;
+  transition: all 400ms ease;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.tm-pos {
+  display: block;
+  font-size: 16px;
+  color: #777777;
+  transition: all 400ms ease;
+  font-family: 'Heebo', sans-serif;
+}
+
+.tm-card:hover h3,
+.tm-card:hover .tm-pos {
+  color: #ffffff;
+}
+
+/* --- PROFESSIONAL RESPONSIVENESS SYSTEM --- */
+
+/* Large Screens (1400px and up) */
+@media only screen and (min-width: 1400px) {
+    .auto-container {
+        max-width: 1320px;
+    }
+}
+
+/* Desktop & Laptops (1200px to 1399px) */
+@media only screen and (max-width: 1399px) {
+    .tm-section { padding: 120px 0; }
+    .tm-title { font-size: 40px; line-height: 50px; }
+    .tm-info h3 { font-size: 22px; }
+}
+
+/* Tablets & Small Laptops (992px to 1199px) */
+@media only screen and (max-width: 1199px) {
+    .tm-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .tm-card {
+        max-width: 320px;
+        margin: 0 auto 40px;
+    }
+    .tm-section { padding: 100px 0; }
+}
+
+/* Tablets (768px to 991px) */
+@media only screen and (max-width: 991px) {
+    .tm-title { font-size: 36px; line-height: 46px; }
+    .tm-subtitle { font-size: 15px; }
+    .tm-patterns .tm-pat-2 { width: 300px; height: 400px; }
+}
+
+/* Small Tablets & Large Mobiles (576px to 767px) */
+@media only screen and (max-width: 767px) {
+    .tm-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .tm-section { padding: 80px 0; }
+    .tm-title { font-size: 32px; line-height: 42px; }
+    .tm-card {
+        max-width: 300px;
+    }
+    .tm-patterns .tm-pat-2 { display: none; } /* Hide heavy patterns on mobile */
+}
+
+/* Small Mobiles (Below 575px) */
+@media only screen and (max-width: 575px) {
+    .tm-section { padding: 60px 0; }
+    .tm-title { font-size: 28px; line-height: 38px; }
+    .tm-header { margin-bottom: 50px; }
+    .tm-info { padding: 35px 15px 45px 15px; }
+    .tm-info h3 { font-size: 20px; line-height: 30px; }
+    .tm-pos { font-size: 14px; }
+    .tm-social-trigger { width: 50px; height: 50px; }
+    .tm-social-box { bottom: -25px; }
+}
+
+/* Patterns */
+.tm-patterns .tm-pat-1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.6; /* Increased to 0.6 for very high visibility */
+  z-index: 0;
+}
+
+.tm-patterns .tm-pat-2 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 492px;
+  height: 593px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 1.0; /* Full opacity as requested */
+  z-index: 0;
+  animation: zoom-fade-tm 8s infinite linear;
+}
+
+@keyframes zoom-fade-tm {
+  0% { transform: scale(0.9) translateX(10px); opacity: 0.8; }
+  50% { transform: scale(1) translateX(0); opacity: 1.0; }
+  100% { transform: scale(0.9) translateX(10px); opacity: 0.8; }
+}
+
+@media only screen and (max-width: 1200px) {
+  .tm-row { flex-wrap: wrap; }
+  .tm-col { flex: 0 0 50% !important; max-width: 50% !important; margin-bottom: 40px; }
+}
+
+@media only screen and (max-width: 767px) {
+  .tm-col { flex: 0 0 100% !important; max-width: 100% !important; }
+}
+

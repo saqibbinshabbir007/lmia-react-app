@@ -1,0 +1,322 @@
+/* AboutUs.css - 100% Robust Layout and Image Placement */
+
+.about-style-three {
+  position: relative;
+  padding: 120px 0px 120px 0px;
+  display: block;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Container to hold everything */
+.about-style-three .container-custom {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+}
+
+/* 1. Left Image (Traveler) */
+.about-style-three .traveler-image {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 30%;
+  z-index: 2;
+}
+
+.about-style-three .traveler-image img {
+  max-height: 700px;
+  width: auto;
+  display: block;
+}
+
+/* 2. Center Content Column */
+.about-style-three .content-column {
+  width: 35%;
+  margin-left: 22%; /* Reduced from 28% to bring content closer to traveler */
+  padding-right: 40px;
+  z-index: 3;
+}
+
+.about-style-three .sec-title {
+  margin-bottom: 30px;
+}
+
+.about-style-three .sec-title .sub-title {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  color: #CE1E22;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+
+.about-style-three .sec-title .sub-title:before {
+  position: absolute;
+  content: '';
+  background: #CE1E22;
+  width: 90px;
+  height: 1px;
+  left: 0;
+  bottom: 0px;
+  opacity: 0.3;
+}
+
+.about-style-three .sec-title .sub-title:after {
+  position: absolute;
+  content: '\e90e'; /* Star icon */
+  font-family: 'icomoon';
+  font-size: 13px;
+  background: #ffffff;
+  width: 25px;
+  text-align: center;
+  color: #CE1E22;
+  left: 32.5px; /* Centered: (90px - 25px) / 2 = 32.5px */
+  bottom: -13px;
+}
+
+.about-style-three .sec-title h2 {
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 700;
+  color: #CE1E22;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.about-style-three .text p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+/* List Items with Icons */
+.about-style-three .list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.about-style-three .list-item .icon-box {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f7f9;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.about-style-three .list-item .icon-box img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(94%) saturate(7158%) hue-rotate(350deg) brightness(90%) contrast(90%);
+    /* Converts icon to red theme color #CE1E22 */
+}
+
+.about-style-three .list-item h5 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #CE1E22;
+  margin: 0;
+}
+
+/* Button */
+.about-style-three .theme-btn {
+  background: #CE1E22;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 17px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.about-style-three .theme-btn:hover {
+  background: #CE1E22;
+  color: #fff;
+}
+
+/* 3. Right Side Single Image */
+.about-style-three .image-grid-column {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+  padding-right: 0;
+}
+
+.about-style-three .single-image-box {
+  position: relative;
+  width: 85%;
+  height: 600px;
+  z-index: 5;
+}
+
+/* Red Decorative Accent behind image */
+.about-style-three .single-image-box::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  bottom: -30px;
+  width: 70%;
+  height: 70%;
+  background-color: #CE1E22;
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.about-style-three .image-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border: 5px solid #fff;
+}
+
+.about-style-three .image-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Success Badge on top of image */
+.about-style-three .success-badge {
+  position: absolute;
+  left: -20px;
+  top: 40px;
+  background: #CE1E22;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 0 30px 30px 0;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 10px 10px 20px rgba(206, 30, 34, 0.2);
+  z-index: 6;
+  white-space: nowrap;
+}
+
+/* Background Patterns */
+.about-style-three .pattern-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-style-three .pattern-map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .about-style-three .container-custom {
+    max-width: 1320px;
+  }
+  .about-style-three .content-column {
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .about-style-three .traveler-image { 
+    display: none; 
+  }
+  .about-style-three .content-column { 
+    width: 48%; 
+    margin-left: 0; 
+    padding-right: 30px;
+  }
+  .about-style-three .image-grid-column { 
+    width: 52%; 
+  }
+}
+
+@media (max-width: 991px) {
+  .about-style-three .pattern-layer {
+    display: none !important;
+  }
+  .about-style-three {
+    padding: 80px 0;
+  }
+  .about-style-three .container-custom { 
+    flex-direction: column; 
+    text-align: center; 
+    min-height: auto;
+  }
+  .about-style-three .content-column { 
+    width: 100%; 
+    margin: 0 0 50px 0; 
+    padding: 0; 
+  }
+  .about-style-three .image-grid-column { 
+    width: 100%; 
+  }
+  .about-style-three .list-item { 
+    justify-content: center; 
+    text-align: left; 
+  }
+  .about-style-three .sec-title h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-style-three {
+    padding: 60px 0;
+  }
+  .about-style-three .pattern-layer {
+    display: none;
+  }
+  .about-style-three .image-grid-column { 
+    flex-direction: column; 
+    gap: 15px;
+  }
+  .about-style-three .single-image-box {
+    height: 400px;
+  }
+  .about-style-three .sec-title h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .about-style-three .text p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-style-three .single-image-box {
+    height: 250px;
+  }
+}

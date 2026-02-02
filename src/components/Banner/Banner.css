@@ -1,0 +1,295 @@
+/* Banner Style Three - Fixed & Consolidated */
+
+.banner-style-three {
+  overflow: hidden;
+  background: #FFFFFF; /* Removed gradient as requested */
+  padding: 220px 0px 250px 0px;
+  position: relative;
+  min-height: 850px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-style-three .auto-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1700px;
+  width: 100%;
+}
+
+.banner-style-three .content-box {
+  max-width: 750px;
+  position: relative;
+  z-index: 15;
+}
+
+.banner-style-three .content-box h1,
+.banner-style-three .content-box h2 {
+  display: block;
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+
+.banner-style-three .content-box p {
+  display: block;
+  font-size: 22px;
+  line-height: 32px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.banner-style-three .content-box p.sub-heading {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 45px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.banner-style-three .image-layer {
+  position: absolute;
+  right: 150px;
+  top: 58%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 35%;
+  max-width: 520px;
+  pointer-events: none;
+}
+
+.banner-style-three .image-layer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Background Patterns */
+.banner-style-three .pattern-layer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.banner-style-three .pattern-layer .pattern-1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 450px;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+  animation: zoom-fade 6s infinite linear;
+}
+
+.banner-style-three .pattern-layer .pattern-2 {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 800px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.4;
+}
+
+.banner-style-three .pattern-layer .pattern-3 {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 400px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  opacity: 0.8;
+  animation: slide 100s linear infinite;
+}
+
+/* Button Styling */
+.banner-style-three .theme-btn {
+  display: inline-block;
+  padding: 18px 50px;
+  background: var(--main-color);
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 20px rgba(3, 43, 102, 0.2);
+}
+
+.banner-style-three .theme-btn:hover {
+  background: #CE1E22;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(3, 43, 102, 0.3);
+}
+
+/* Animations */
+@keyframes zoom-fade {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.05); opacity: 0.4; }
+}
+
+@keyframes slide {
+  from { background-position: 0 bottom; }
+  to { background-position: 1920px bottom; }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+RESPONSIVENESS - PIXEL PERFECT
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Under 1600px */
+@media screen and (max-width: 1599px) {
+  .banner-style-three {
+    padding: 180px 0;
+    min-height: 750px;
+  }
+  .banner-style-three .image-layer {
+    right: 80px;
+    width: 42%;
+  }
+  .banner-style-three .content-box h1,
+  .banner-style-three .content-box h2 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+/* Tablet Landscape / Laptop (Under 1280px) */
+@media screen and (max-width: 1279px) {
+  .banner-style-three {
+    min-height: 700px;
+    padding: 150px 0;
+  }
+  .banner-style-three .image-layer {
+    right: 40px;
+    width: 45%;
+    max-width: 500px;
+  }
+  .banner-style-three .content-box {
+    max-width: 600px;
+  }
+  .banner-style-three .content-box h1,
+  .banner-style-three .content-box h2 {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  .banner-style-three .pattern-layer .pattern-2 {
+    width: 600px;
+  }
+}
+
+/* Specific for 1024px to 1199px */
+@media screen and (max-width: 1199px) {
+  .banner-style-three .image-layer {
+    opacity: 0.8;
+  }
+  .banner-style-three .pattern-layer .pattern-2 {
+    display: none;
+  }
+}
+
+/* Tablet (Under 992px) */
+@media screen and (max-width: 991px) {
+  .banner-style-three {
+    padding: 320px 0 100px 0 !important; /* Aggressive padding to clear absolute header */
+    min-height: auto;
+    text-align: left;
+  }
+  .banner-style-three .auto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Changed from center to left */
+  }
+  .banner-style-three .content-box {
+    max-width: 100%;
+    margin-bottom: 50px;
+    order: 1;
+  }
+  .banner-style-three .image-layer {
+    display: none; /* Hidden on Mobile & Tablet as requested */
+  }
+  .banner-style-three .content-box h1,
+  .banner-style-three .content-box h2 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .banner-style-three .content-box p {
+    font-size: 20px;
+  }
+  .banner-style-three .pattern-layer .pattern-1 {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Mobile (Under 768px) */
+@media screen and (max-width: 767px) {
+  .banner-style-three {
+    padding: 280px 0 80px 0 !important; /* Extreme padding for mobile */
+  }
+  .banner-style-three .auto-container {
+    align-items: flex-start !important;
+    padding: 0 10px; /* Reduced from default 20px to give more room on left */
+  }
+  .banner-style-three .content-box {
+    margin-top: 20px; /* Extra nudge down */
+    text-align: left !important;
+  }
+  .banner-style-three .content-box h1,
+  .banner-style-three .content-box h2 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  .banner-style-three .content-box p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .banner-style-three .content-box p.sub-heading {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+  .banner-style-three .image-layer {
+    width: 90%;
+  }
+  .banner-style-three .theme-btn {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+  .banner-style-three .pattern-layer .pattern-1 {
+    display: none;
+  }
+}
+
+/* Small Mobile (Under 480px) */
+@media screen and (max-width: 479px) {
+  .banner-style-three .content-box h1,
+  .banner-style-three .content-box h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .banner-style-three .content-box p {
+    font-size: 16px;
+  }
+  .banner-style-three .image-layer {
+    width: 100%;
+  }
+  .banner-style-three {
+    padding: 250px 10px 60px 10px !important; /* Reduced side padding to 10px */
+    text-align: left !important;
+  }
+  .banner-style-three .auto-container {
+    align-items: flex-start !important;
+    padding: 0 5px; /* Even tighter for very small screens */
+  }
+}

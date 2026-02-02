@@ -1,0 +1,302 @@
+/* Main Footer Styles - Prefixed with mft- */
+
+.mft-main-footer {
+    position: relative;
+    background: #CE1E22; /* Strict #CE1E22 theme */
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.mft-widget-section {
+    position: relative;
+    padding: 100px 0px 50px 0px;
+    z-index: 2;
+}
+
+.mft-bg-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.12; /* Subtle pattern visibility */
+    mix-blend-mode: overlay;
+}
+
+/* Custom Grid System for Footer to ensure Row behavior */
+.mft-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.mft-col {
+    padding: 0 15px;
+}
+
+.mft-col-3 { width: 25%; }
+.mft-col-2 { width: 16.66%; }
+.mft-col-4 { width: 33.33%; }
+
+/* Logo Widget */
+.mft-logo-widget {
+    position: relative;
+}
+
+.mft-footer-logo {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.mft-footer-logo img {
+    max-width: 200px;
+}
+
+.mft-text p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* Widget Title */
+.mft-widget-title {
+    position: relative;
+    display: block;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mft-widget-title:before {
+    position: absolute;
+    content: '';
+    background: #ffffff;
+    width: 80px;
+    height: 1px;
+    left: 0px;
+    bottom: -1px;
+}
+
+.mft-widget-title h3 {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+/* Links List */
+.mft-links-list li {
+    margin-bottom: 12px;
+}
+
+.mft-links-list li a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mft-links-list li a:hover {
+    color: #CE1E22;
+    padding-left: 5px;
+}
+
+/* Image List (Gallery) */
+.mft-image-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+}
+
+.mft-image-list li {
+    width: 33.33%;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+.mft-image-box {
+    position: relative;
+    height: 100px;
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.mft-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.mft-image-box:hover img {
+    opacity: 0.5;
+}
+
+.mft-image-box .mft-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(206, 30, 34, 0.7);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.mft-image-box:hover .mft-overlay {
+    opacity: 1;
+}
+
+.mft-image-box .mft-overlay i:before {
+    content: '\e918'; /* Plus icon or similar from icomoon if available, otherwise just use CSS */
+    font-family: 'icomoon';
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Modal Styles */
+.mft-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.mft-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mft-modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+.mft-modal-close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mft-modal-close:hover {
+    color: #ff3b3b;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .mft-modal-close {
+        top: -40px;
+        right: 0;
+    }
+}
+
+/* Contact Widget */
+.mft-contact-list li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.mft-contact-list li .icon-box {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    color: #ffffff;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.mft-contact-list li h6 {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mft-contact-list li .text a,
+.mft-contact-list li .text span {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.mft-contact-list li .text a:hover {
+    color: #CE1E22;
+}
+
+
+
+/* Footer Bottom */
+.mft-footer-bottom {
+    padding: 30px 0px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.mft-copyright p {
+    color: #ffffff;
+    margin: 0;
+}
+
+.mft-copyright p a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .mft-col-3, .mft-col-2, .mft-col-4 {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mft-col-3, .mft-col-2, .mft-col-4 {
+        width: 100%;
+    }
+
+}

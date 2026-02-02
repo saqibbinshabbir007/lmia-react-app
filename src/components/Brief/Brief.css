@@ -1,0 +1,266 @@
+/* Brief Section Component Styles - Prefixed with brf- */
+
+.brf-section {
+    position: relative;
+    padding: 0;
+    background: #CE1E22; /* Main color - Red theme */
+    overflow: hidden;
+}
+
+.brf-outer-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Background Image Layer (Left Side) */
+.brf-bg-layer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40%; /* Reduced from 50% to give text more room */
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Content Column (Right Side) */
+.brf-content-column {
+    position: relative;
+    margin-left: 40%; /* Reduced from 50% */
+    width: 60%;      /* Increased from 50% */
+    padding: 70px 50px 70px 60px;
+    z-index: 2;
+}
+
+/* Patterns */
+.brf-pattern-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.brf-pattern-1 {
+    position: absolute;
+    left: -100px;
+    top: -100px;
+    width: 627px;
+    height: 593px;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.brf-pattern-2 {
+    position: absolute;
+    right: 0px;
+    bottom: -150px;
+    width: 202px;
+    height: 355px;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+/* Typography & Content */
+.brf-content-box {
+    position: relative;
+    max-width: 900px; /* Increased from 750px to give more text space */
+    z-index: 5;
+}
+
+.brf-sec-title {
+    margin-bottom: 20px;
+}
+
+.brf-sub-title {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-family: 'Maven Pro', sans-serif;
+    letter-spacing: 1px;
+}
+
+.brf-sec-title h2 {
+    display: block;
+    font-size: 44px;
+    line-height: 54px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.brf-text {
+    margin-bottom: 0px;
+}
+
+.brf-text p {
+    font-size: 17px; /* Slightly larger for readability */
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Heebo', sans-serif;
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+.brf-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* List Items */
+.brf-list-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding: 0;
+    list-style: none;
+}
+
+.brf-list-item li {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.brf-list-item li:last-child {
+    border-bottom: none;
+}
+
+.brf-list-item li .brf-step-text {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 23px 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: default; 
+    font-family: 'Maven Pro', sans-serif;
+}
+
+/* Button */
+.brf-btn-box .brf-theme-btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 35px;
+    background: #ffffff;
+    color: #CE1E22;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.brf-btn-box .brf-theme-btn:hover {
+    background: #CE1E22;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+/* ==========================================================================
+   Responsive Styles for Brief Section
+   ========================================================================== */
+
+@media only screen and (max-width: 1600px) {
+    .brf-content-column {
+        padding: 60px 40px 60px 50px;
+    }
+    .brf-sec-title h2 {
+        font-size: 38px;
+        line-height: 48px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .brf-content-column {
+        margin-left: 35%;
+        width: 65%;
+    }
+    .brf-bg-layer {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .brf-section {
+        padding: 0;
+    }
+    .brf-bg-layer {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        left: 0;
+        top: 0;
+    }
+    .brf-content-column {
+        margin-left: 0;
+        width: 100%;
+        padding: 60px 30px;
+    }
+    .brf-sec-title h2 {
+        font-size: 34px;
+        line-height: 44px;
+    }
+    .brf-pattern-1 {
+        left: -50px; 
+        top: -50px;
+        width: 300px; 
+        height: 300px;
+        background-size: contain;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .brf-bg-layer {
+        height: 250px;
+    }
+    .brf-content-column {
+        padding: 50px 20px;
+    }
+    .brf-sec-title h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .brf-text p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .brf-list-item li .brf-step-text {
+        font-size: 15px;
+        padding: 15px 0;
+    }
+    .brf-btn-box .brf-theme-btn {
+        width: 100%;
+        text-align: center;
+        padding: 15px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .brf-bg-layer {
+        height: 200px;
+    }
+    .brf-content-column {
+        padding: 40px 15px;
+    }
+    .brf-sec-title h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .brf-sub-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,290 @@
+/* Steps Section Component Styles - Prefixed with sts- */
+
+.sts-section {
+    position: relative;
+    padding: 0;
+    background: #CE1E22; /* Red theme */
+    overflow: hidden;
+}
+
+.sts-outer-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Background Image Layer (Left Side) */
+.sts-bg-layer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Content Column (Right Side) */
+.sts-content-column {
+    position: relative;
+    margin-left: 50%;
+    width: 50%;
+    padding: 45px 70px 35px 110px; /* Slight increase for better breathing room */
+    z-index: 2;
+}
+
+/* Patterns */
+.sts-pattern-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.sts-pattern-1 {
+    position: absolute;
+    left: -100px;
+    top: -100px;
+    width: 627px;
+    height: 593px;
+    background-repeat: no-repeat;
+    opacity: 1; /* Maximum visibility */
+}
+
+.sts-pattern-2 {
+    position: absolute;
+    right: 0px;
+    bottom: -150px;
+    width: 202px;
+    height: 355px;
+    background-repeat: no-repeat;
+    opacity: 1; /* Maximum visibility */
+}
+
+/* Typography & Content */
+.sts-content-box {
+    position: relative;
+    max-width: 540px;
+}
+
+.sts-sec-title {
+    margin-bottom: 2px;
+}
+
+.sts-sub-title {
+    position: relative;
+    display: inline-block;
+    font-size: 13px; /* Smaller */
+    line-height: 22px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px; /* Slight increase */
+    font-family: 'Maven Pro', sans-serif;
+    padding-left: 0;
+}
+
+.sts-sec-title h2 {
+    display: block;
+    font-size: 36px; /* Bumped from 32px */
+    line-height: 46px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.sts-text {
+    margin-bottom: 20px; /* Bumped from 15px */
+}
+
+.sts-text p {
+    font-size: 15px; /* Smaller */
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Heebo', sans-serif;
+}
+
+/* List Items */
+.sts-list-item {
+    position: relative;
+    margin-bottom: 12px; /* Minimal */
+    padding: 0;
+    list-style: none;
+}
+
+.sts-list-item li {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 0; /* Bumped from 8px */
+}
+
+.sts-list-item li:last-child {
+    border-bottom: none;
+}
+
+.sts-step-title {
+    position: relative;
+    display: block;
+    font-size: 18px; /* Smaller */
+    line-height: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.sts-step-desc {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Heebo', sans-serif;
+}
+
+
+/* Button */
+.sts-btn-box .sts-theme-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px; /* Smaller button */
+    background: #CE1E22;
+    color: #fff;
+    border: 2px solid #ffffff; /* Added white border */
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sts-btn-box .sts-theme-btn:hover {
+    background: #ffffff;
+    color: #CE1E22;
+    border-color: #ffffff;
+}
+
+/* ==========================================================================
+   Responsive Styles for Steps Section
+   ========================================================================== */
+
+/* Large Laptops (1366px - 1600px) */
+@media only screen and (max-width: 1600px) {
+    .sts-content-column {
+        padding: 40px 50px 30px 60px; /* Minimized */
+    }
+    .sts-sec-title h2 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+
+/* Medium Laptops (1024px - 1365px) */
+@media only screen and (max-width: 1365px) {
+    .sts-content-column {
+        padding: 35px 40px 30px 50px; /* Minimized */
+    }
+    .sts-sec-title h2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .sts-step-title {
+        font-size: 18px;
+    }
+    .sts-step-desc {
+        font-size: 14px;
+    }
+}
+
+/* Tablets (Stacked Layout: 768px - 1023px) */
+@media only screen and (max-width: 1023px) {
+    .sts-section {
+        padding: 0;
+    }
+    .sts-bg-layer {
+        position: relative;
+        width: 100%;
+        height: 250px; /* Reduced from 400px */
+        left: 0;
+        top: 0;
+    }
+    .sts-content-column {
+        margin-left: 0;
+        width: 100%;
+        padding: 30px 20px; /* Ultra minimal for mobile */
+    }
+    .sts-sec-title h2 {
+        font-size: 34px;
+        line-height: 44px;
+    }
+    .sts-btn-box {
+        text-align: left; /* Keep left alignment */
+    }
+    
+    /* Patterns adjusted for stacked layout */
+    .sts-pattern-1 {
+        left: -50px; 
+        top: -50px;
+        width: 300px; 
+        height: 300px;
+        background-size: contain;
+    }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+    .sts-bg-layer {
+        height: 180px; /* Reduced height on mobile */
+    }
+    .sts-content-column {
+        padding: 50px 20px;
+    }
+    .sts-sec-title h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .sts-text p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .sts-list-item li {
+        padding: 20px 0;
+    }
+    .sts-step-title {
+        font-size: 17px;
+        line-height: 26px;
+    }
+    .sts-step-desc {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .sts-btn-box .sts-theme-btn {
+        width: 100%; /* Full width button on mobile */
+        text-align: center;
+        padding: 15px 20px;
+    }
+}
+
+/* Small Mobiles (480px and below) */
+@media only screen and (max-width: 480px) {
+    .sts-bg-layer {
+        height: 200px;
+    }
+    .sts-content-column {
+        padding: 40px 15px;
+    }
+    .sts-sec-title h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .sts-sub-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}

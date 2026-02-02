@@ -1,0 +1,221 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #CE1E22;
+  --secondary-color: #CE1E22;
+  --text-color: #444444; 
+  --title-color: #CE1E22;
+  --white-color: #ffffff;
+  --heebo: 'Heebo', sans-serif;
+  --maven: 'Maven Pro', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 29px;
+  font-weight: 400;
+  background: #ffffff;
+  font-family: var(--heebo);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all 500ms ease;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--maven);
+  font-weight: 400;
+  color: var(--title-color);
+  margin: 0;
+}
+
+p {
+  font-family: var(--heebo);
+  color: var(--text-color);
+  font-weight: 400;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Utility Classes */
+.auto-container {
+  max-width: 1450px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.p_relative {
+  position: relative;
+}
+
+.centred {
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mb_20 { margin-bottom: 20px; }
+.mb_30 { margin-bottom: 30px; }
+.mb_40 { margin-bottom: 40px; }
+.mb_50 { margin-bottom: 50px; }
+.mb_60 { margin-bottom: 60px; }
+.pb_150 { padding-bottom: 150px; }
+.sec-pad { padding: 100px 0; }
+
+/* Row and Column System */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+[class*="col-"] {
+  padding: 0 15px;
+}
+
+.col-lg-2 { width: 16.666%; }
+.col-lg-3 { width: 25%; }
+.col-lg-4 { width: 33.333%; }
+.col-lg-5 { width: 41.666%; }
+.col-lg-6 { width: 50%; }
+.col-lg-7 { width: 58.333%; }
+.col-lg-8 { width: 66.666%; }
+.col-lg-9 { width: 75%; }
+.col-lg-10 { width: 83.333%; }
+.col-lg-11 { width: 91.666%; }
+.col-lg-12 { width: 100%; }
+
+.col-md-2 { width: 16.666%; }
+.col-md-3 { width: 25%; }
+.col-md-4 { width: 33.333%; }
+.col-md-6 { width: 50%; }
+.col-md-12 { width: 100%; }
+
+.col-sm-6 { width: 50%; }
+.col-sm-12 { width: 100%; }
+
+.offset-lg-3 {
+  margin-left: 25%;
+}
+
+@media (max-width: 1199px) {
+  .offset-lg-3 {
+    margin-left: 0;
+  }
+}
+
+/* Responsive Grid System */
+@media (max-width: 1599px) {
+  .auto-container {
+    max-width: 1320px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .auto-container {
+    max-width: 1140px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .auto-container {
+    max-width: 960px;
+  }
+  .col-lg-3 { width: 50%; margin-bottom: 30px; }
+  .col-lg-4 { width: 50%; margin-bottom: 30px; }
+  .col-lg-6 { width: 100%; margin-bottom: 30px; }
+}
+
+@media (max-width: 991px) {
+  .auto-container {
+    max-width: 720px;
+  }
+  .col-md-6 { width: 50%; margin-bottom: 30px; }
+  .col-lg-3, .col-lg-4 { width: 50%; }
+  .sec-pad { padding: 80px 0; }
+}
+
+@media (max-width: 767px) {
+  .auto-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .col-lg-3, .col-lg-4, .col-lg-6, .col-md-6, .col-sm-12 {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .sec-pad { padding: 60px 0; }
+  
+  h2 { font-size: 30px !important; line-height: 40px !important; }
+  h3 { font-size: 22px !important; line-height: 32px !important; }
+}
+
+@media (max-width: 480px) {
+  h2 { font-size: 26px !important; line-height: 36px !important; }
+  body { font-size: 15px; line-height: 26px; }
+}
+
+/* Boxed Wrapper */
+.boxed_wrapper {
+  position: relative;
+  margin: 0 auto;
+  overflow: visible; /* Changed from hidden to avoid scroll intercept conflicts */
+  width: 100%;
+  min-width: 300px;
+}
+
+/* Additional Utility Classes */
+.mr_20 { margin-right: 20px; }
+.ml_30 { margin-left: 30px; }
+.mt_18 { margin-top: 18px; }
+.mt_40 { margin-top: 40px; }
+.mb_13 { margin-bottom: 13px; }
+.mb_18 { margin-bottom: 18px; }
+.mb_25 { margin-bottom: 25px; }
+.mb_110 { margin-bottom: 110px; }
+.pb_20 { padding-bottom: 20px; }
+.pb_40 { padding-bottom: 40px; }
+.pb_60 { padding-bottom: 60px; }
+.pt_40 { padding-top: 40px; }
+.pt_90 { padding-top: 90px; }
+.d_block { display: block; }
+.d_inline { display: inline-block; }
+
+/* Mobile Menu Visible */
+.mobile-menu-visible {
+  overflow: hidden;
+}

@@ -1,0 +1,1057 @@
+/* Enrollment Page - Professional Design Matching Site Style */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/assets/fonts/icomoon.eot?tin97q');
+  src:  url('/assets/fonts/icomoon.eot?tin97q#iefix') format('embedded-opentype'),
+    url('/assets/fonts/icomoon.ttf?tin97q') format('truetype'),
+    url('/assets/fonts/icomoon.woff?tin97q') format('woff'),
+    url('/assets/fonts/icomoon.svg?tin97q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.enr-enrollment-page {
+    position: relative;
+    width: 100%;
+}
+
+/* Hero Section - Page Title */
+.enr-page-title {
+    padding: 174px 0px 156px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.enr-page-title .enr-bg-layer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.enr-page-title .enr-bg-layer:before {
+    position: absolute;
+    content: '';
+    background: var(--main-color);
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    opacity: 0.85;
+}
+
+.enr-page-title .enr-content-box {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.enr-page-title .enr-content-box h1 {
+    position: relative;
+    display: block;
+    font-size: 54px;
+    line-height: 64px;
+    font-weight: 700;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.enr-page-title .enr-content-box .enr-sub-text {
+    font-size: 22px;
+    line-height: 32px;
+    color: var(--white-color);
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.enr-page-title .enr-pattern-layer {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 826px;
+    height: 186px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.enr-page-title .enr-shape-1 {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.15;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Main Enrollment Section */
+.enr-enrollment-section {
+    position: relative;
+    padding: 120px 0px;
+    background: #F5F3F3;
+    overflow: hidden;
+}
+
+.enr-enrollment-section .enr-shape-2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 350px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.enr-enrollment-section .enr-shape-3 {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.enr-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+    position: relative;
+    z-index: 2;
+}
+
+.enr-column {
+    padding: 0 30px;
+    width: 50%;
+}
+
+/* Section Titles */
+.enr-sec-title {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.enr-sub-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #CE1E22;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-sub-title:before {
+    position: absolute;
+    content: '';
+    background: #CE1E22;
+    width: 90px;
+    height: 1px;
+    left: 0;
+    bottom: 0px;
+    opacity: 0.3;
+}
+
+.enr-sub-title:after {
+    position: absolute;
+    content: '\e90e';
+    font-family: 'icomoon';
+    font-size: 13px;
+    background: #F5F3F3;
+    width: 25px;
+    text-align: center;
+    color: #CE1E22;
+    left: 32.5px;
+    bottom: -13px;
+}
+
+.enr-sec-title h2 {
+    font-size: 44px;
+    line-height: 54px;
+    font-weight: 700;
+    color: #CE1E22;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-text p {
+    font-size: 16px;
+    color: #777777;
+    line-height: 28px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.mb_45 {
+    margin-bottom: 45px;
+}
+
+.mb_40 {
+    margin-bottom: 40px;
+}
+
+/* Benefits List */
+.enr-benefits-list {
+    margin: 40px 0;
+}
+
+.enr-benefit-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.enr-benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.enr-benefit-item .enr-icon-box {
+    width: 50px;
+    height: 50px;
+    background: #CE1E22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.enr-benefit-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #CE1E22;
+    margin-bottom: 8px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-benefit-content p {
+    font-size: 15px;
+    color: #777777;
+    line-height: 24px;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* Price Box */
+.enr-price-box {
+    margin-top: 40px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 2px solid #CE1E22;
+}
+
+.enr-price-label {
+    font-size: 16px;
+    color: #777777;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.enr-price-amount {
+    font-size: 48px;
+    font-weight: 800;
+    color: #CE1E22;
+    margin-bottom: 10px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-price-amount span {
+    font-size: 24px;
+    font-weight: 600;
+    color: #777777;
+}
+
+.enr-price-note {
+    font-size: 14px;
+    color: #777777;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* Form Styling */
+.enr-form-inner {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.enr-form-desc {
+    color: #616161 !important;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.enr-form-row {
+    display: flex;
+    margin: 0 -10px;
+}
+
+.enr-form-group {
+    width: 50%;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.enr-form-group:focus-within,
+.enr-form-group:has(.is-open) {
+    z-index: 1000;
+}
+
+.enr-form-group.full-width {
+    width: 100%;
+    padding: 0;
+}
+
+.enr-form-group input {
+    width: 100%;
+    background: #F7F7F7;
+    border: 1px solid #F7F7F7;
+    border-radius: 0px;
+    padding: 15px 30px;
+    font-size: 14px;
+    color: #444444;
+    outline: none;
+    transition: all 0.3s ease;
+    height: 65px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.enr-form-group input:focus {
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.enr-form-group input::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+/* Email Validation Styles */
+.enr-form-group.email-invalid input {
+    border: 1px solid #dc3545 !important;
+    border-radius: 5px;
+    background: #fff5f5;
+}
+
+.enr-form-group.email-valid input {
+    border: 1px solid #28a745 !important;
+    border-radius: 5px;
+    background: #f0fff4;
+}
+
+.email-error-msg,
+.field-error-msg {
+    display: block;
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.enr-form-group.has-error input {
+    border: 1px solid #dc3545 !important;
+    border-radius: 5px;
+    background: #fff5f5;
+}
+
+/* Searchable Dropdown Styling */
+.enr-form-group.country-phone {
+    position: relative;
+}
+
+.enr-searchable-dropdown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 65px;
+    z-index: 10;
+}
+
+.enr-searchable-dropdown.is-open {
+    z-index: 99999;
+}
+
+.enr-searchable-dropdown .country-selector {
+    cursor: pointer;
+    background: transparent;
+    height: 65px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.enr-searchable-dropdown .country-selector span.current-code {
+    font-size: 14px;
+    font-weight: 600;
+    color: #CE1E22;
+    margin-left: 6px;
+    margin-right: 15px;
+}
+
+.enr-searchable-dropdown .flag-img {
+    width: 18px;
+    height: 12px;
+    object-fit: cover;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.enr-searchable-dropdown .dropdown-list-wrapper {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    width: 280px;
+    background: #ffffff !important;
+    border: 1px solid #BDCBDE;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    z-index: 99999;
+    border-radius: 4px;
+    padding: 10px 0;
+    text-align: left !important;
+}
+
+.enr-searchable-dropdown .dropdown-list-wrapper .enr-search-input-v2 {
+    text-align: left !important;
+    padding: 0 12px !important;
+    margin: 0 10px 8px !important;
+    height: 35px !important;
+    display: block !important;
+    width: calc(100% - 20px) !important;
+    box-sizing: border-box !important;
+    font-size: 13px !important;
+    border: 1px solid #BDCBDE;
+    border-radius: 4px;
+}
+
+.enr-form-group.country-phone input {
+    padding-left: 115px !important;
+}
+
+.enr-searchable-dropdown .dropdown-list {
+    max-height: 250px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.enr-searchable-dropdown .dropdown-list::-webkit-scrollbar { 
+    width: 5px; 
+}
+.enr-searchable-dropdown .dropdown-list::-webkit-scrollbar-track { 
+    background: #f1f1f1; 
+}
+.enr-searchable-dropdown .dropdown-list::-webkit-scrollbar-thumb { 
+    background: #CE1E22; 
+    border-radius: 10px; 
+}
+
+.enr-searchable-dropdown .dropdown-list li {
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    transition: 0.2s;
+    color: #333;
+}
+
+.enr-searchable-dropdown .dropdown-list li img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.enr-searchable-dropdown .dropdown-list li:hover { 
+    background: #f0f4f8; 
+}
+.enr-searchable-dropdown .dropdown-list li.selected { 
+    background: #CE1E22; 
+    color: #ffffff; 
+}
+
+/* Custom Checkbox */
+.enr-custom-checkbox {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 14px;
+    color: #777777;
+    user-select: none;
+    line-height: 24px;
+}
+
+.enr-custom-checkbox input {
+    display: none;
+}
+
+.enr-custom-checkbox .checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    margin-right: 15px;
+    margin-top: 2px;
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.enr-custom-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.enr-custom-checkbox input:checked ~ .checkmark {
+    background-color: #CE1E22;
+}
+
+.enr-custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.enr-custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.enr-custom-checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.enr-custom-checkbox .checkbox-text {
+    flex: 1;
+    font-family: 'Heebo', sans-serif;
+}
+
+.enr-custom-checkbox .checkbox-text a {
+    color: #CE1E22;
+    text-decoration: underline;
+}
+
+.enr-custom-checkbox .checkbox-text strong {
+    color: #CE1E22;
+    font-weight: 700;
+}
+
+/* Submit Button */
+.enr-submit-btn {
+    background: #CE1E22;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 18px 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Maven Pro', sans-serif;
+    width: 100%;
+    justify-content: center;
+}
+
+.enr-submit-btn:hover {
+    background: #a0171a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(206, 30, 34, 0.3);
+}
+
+.enr-btn-box {
+    margin-top: 20px;
+}
+
+/* PayPal Payment Section */
+.enr-paypal-section {
+    width: 100%;
+    padding: 30px;
+    background: #F9F9F9;
+    border-radius: 10px;
+    border: 2px solid #CE1E22;
+}
+
+.enr-payment-info {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #E5E5E5;
+}
+
+.enr-payment-info h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #CE1E22;
+    margin-bottom: 10px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-payment-info p {
+    font-size: 18px;
+    color: #444444;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+.enr-payment-info strong {
+    color: #CE1E22;
+    font-size: 24px;
+}
+
+.enr-back-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #777777;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-back-btn:hover {
+    background: #555555;
+    transform: translateY(-2px);
+}
+
+.enr-success-message {
+    text-align: center;
+    padding: 40px 20px;
+    background: #F0FFF4;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+}
+
+.enr-success-message svg {
+    margin-bottom: 20px;
+}
+
+.enr-success-message h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #28a745;
+    margin-bottom: 15px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-success-message p {
+    font-size: 16px;
+    color: #444444;
+    line-height: 24px;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .auto-container { 
+        padding: 0 40px; 
+    }
+}
+
+@media (max-width: 1200px) {
+    .enr-sec-title h2 { 
+        font-size: 38px; 
+        line-height: 48px; 
+    }
+    .enr-column { 
+        padding: 0 20px; 
+    }
+}
+
+@media (max-width: 991px) {
+    .enr-enrollment-section { 
+        padding: 80px 0; 
+    }
+    .enr-column { 
+        width: 100%; 
+        margin-bottom: 50px; 
+    }
+    .enr-column:last-child { 
+        margin-bottom: 0; 
+    }
+    .enr-page-title { 
+        padding: 120px 0px 100px 0px; 
+    }
+    .enr-page-title .enr-content-box h1 { 
+        font-size: 42px; 
+        line-height: 52px; 
+    }
+    .enr-page-title .enr-pattern-layer { 
+        display: none !important; 
+    }
+    .enr-page-title .enr-shape-1 {
+        display: none;
+    }
+    .enr-form-inner {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .enr-page-title { 
+        padding: 80px 0px 70px 0px; 
+    }
+    .enr-page-title .enr-content-box h1 { 
+        font-size: 32px; 
+        line-height: 42px; 
+    }
+    .enr-page-title .enr-content-box .enr-sub-text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .enr-page-title .enr-pattern-layer {
+        display: none !important;
+    }
+    .enr-sec-title h2 { 
+        font-size: 28px; 
+        line-height: 38px; 
+    }
+    
+    .enr-form-row { 
+        flex-direction: column; 
+        margin: 0; 
+    }
+    .enr-form-group { 
+        width: 100% !important; 
+        padding: 0; 
+        margin-bottom: 20px; 
+    }
+    
+    .enr-benefit-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .enr-benefit-item .enr-icon-box {
+        margin: 0 auto 15px auto;
+    }
+
+    .enr-searchable-dropdown .dropdown-list-wrapper { 
+        width: calc(100vw - 60px); 
+        max-width: 300px; 
+        left: 0; 
+    }
+    .enr-submit-btn { 
+        width: 100%; 
+        justify-content: center; 
+    }
+    .enr-form-inner {
+        padding: 30px 20px;
+    }
+    .enr-enrollment-section .enr-shape-2,
+    .enr-enrollment-section .enr-shape-3 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .enr-page-title { 
+        padding: 60px 0px 50px 0px; 
+    }
+    .enr-page-title .enr-content-box h1 { 
+        font-size: 28px; 
+        line-height: 38px; 
+    }
+    .enr-page-title .enr-pattern-layer {
+        display: none !important;
+    }
+    .enr-sec-title h2 { 
+        font-size: 24px; 
+        line-height: 34px; 
+    }
+    .enr-searchable-dropdown { 
+        width: 90px; 
+    }
+    .enr-form-group.country-phone input { 
+        padding-left: 100px !important; 
+    }
+    .enr-price-amount {
+        font-size: 36px;
+    }
+    .enr-price-amount span {
+        font-size: 18px;
+    }
+}
+
+/* Terms & Conditions Section */
+.enr-terms-section {
+    position: relative;
+    width: 100%;
+}
+
+.enr-terms-header {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.enr-read-terms-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #CE1E22;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Maven Pro', sans-serif;
+    width: auto;
+}
+
+.enr-read-terms-btn:hover {
+    background: #a0171a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(206, 30, 34, 0.3);
+}
+
+/* Terms Modal */
+.enr-terms-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    padding: 20px;
+}
+
+.enr-terms-modal-content {
+    background: #ffffff;
+    border-radius: 15px;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.enr-terms-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+    border-bottom: 2px solid #E5E5E5;
+}
+
+.enr-terms-modal-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #CE1E22;
+    margin: 0;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-modal-close {
+    background: transparent;
+    border: none;
+    color: #777777;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.enr-modal-close:hover {
+    color: #CE1E22;
+    transform: rotate(90deg);
+}
+
+.enr-terms-modal-body {
+    padding: 30px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.enr-terms-modal-body p {
+    font-size: 16px;
+    color: #444444;
+    line-height: 26px;
+    margin-bottom: 20px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.enr-terms-link-box {
+    margin: 25px 0;
+    padding: 20px;
+    background: #F5F3F3;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.enr-full-terms-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #CE1E22;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-full-terms-link:hover {
+    color: #a0171a;
+    text-decoration: underline;
+}
+
+.enr-terms-key-points {
+    margin-top: 30px;
+    padding: 20px;
+    background: #F9F9F9;
+    border-left: 4px solid #CE1E22;
+    border-radius: 5px;
+}
+
+.enr-terms-key-points h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #CE1E22;
+    margin-bottom: 15px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-terms-key-points ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.enr-terms-key-points ul li {
+    font-size: 15px;
+    color: #444444;
+    line-height: 28px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    font-family: 'Heebo', sans-serif;
+}
+
+.enr-terms-key-points ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #CE1E22;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.enr-terms-modal-footer {
+    padding: 20px 30px;
+    border-top: 2px solid #E5E5E5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.enr-modal-understand-btn {
+    padding: 12px 30px;
+    background: #CE1E22;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.enr-modal-understand-btn:hover {
+    background: #a0171a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(206, 30, 34, 0.3);
+}
+
+/* Responsive Modal */
+@media (max-width: 767px) {
+    .enr-terms-modal-content {
+        max-width: 95%;
+        max-height: 95vh;
+    }
+    
+    .enr-terms-modal-header {
+        padding: 20px;
+    }
+    
+    .enr-terms-modal-header h3 {
+        font-size: 20px;
+    }
+    
+    .enr-terms-modal-body {
+        padding: 20px;
+    }
+    
+    .enr-terms-modal-footer {
+        padding: 15px 20px;
+    }
+}

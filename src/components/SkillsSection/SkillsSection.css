@@ -1,0 +1,295 @@
+/* Skills Section Component Styles - Prefixed with sks- */
+
+.sks-section {
+    position: relative;
+    padding: 100px 0px 150px 0px; /* Reduced top padding */
+    background-color: #fff;
+    margin-top: -120px; /* Overlap effect */
+    z-index: 10; /* Ensure it stays above the section above */
+    overflow: hidden;
+}
+
+.sks-pattern-layer-2 {
+    position: absolute;
+    left: 0px;
+    top: -100px;
+    width: 368px;
+    height: 466px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.sks-pattern-layer-3 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 999px;
+    height: 961px;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.sks-image-layer {
+    position: absolute;
+    right: 270px;
+    bottom: 100px;
+    z-index: 2;
+}
+
+.sks-image-layer img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.sks-content-box {
+    position: relative;
+    max-width: 575px;
+    z-index: 3;
+}
+
+/* Section Title Styling */
+.sks-sec-title {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.sks-sec-title .sks-sub-title {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    color: #CE1E22;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.sks-sec-title h2 {
+    display: block;
+    font-size: 44px;
+    line-height: 54px;
+    font-weight: 700;
+    color: #CE1E22;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.sks-text p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* Industries List Implementation - Refined Professional Design */
+.sks-mb_40 { margin-bottom: 40px; }
+
+.sks-industries-section {
+    position: relative;
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+.sks-industries-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 35px;
+    font-family: 'Maven Pro', sans-serif;
+    position: relative;
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.sks-industries-title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 100%;
+    background: #CE1E22;
+}
+
+.sks-industry-item {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.4s ease;
+}
+
+.sks-industry-item:last-child {
+    border-bottom: none;
+}
+
+.sks-industry-item:hover {
+    padding-left: 10px;
+}
+
+.sks-industry-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.sks-check-icon {
+    color: #CE1E22;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.sks-industry-item h5 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-family: 'Maven Pro', sans-serif;
+    margin: 0;
+}
+
+.sks-industry-desc {
+    font-size: 15px;
+    line-height: 24px;
+    color: #777;
+    margin: 0;
+    padding-left: 37px; /* Align with title text after icon */
+    font-family: 'Heebo', sans-serif;
+}
+
+
+/* Button Styling matches theme */
+.sks-btn-box .sks-theme-btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 35px;
+    background: #CE1E22;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sks-btn-box .sks-theme-btn:hover {
+    background: #CE1E22;
+}
+
+/* ==========================================================================
+   Responsive Styles for Skills Section
+   ========================================================================== */
+
+/* Ultra Wide Screens */
+@media only screen and (min-width: 1601px) {
+    .sks-section {
+        margin-top: -140px;
+    }
+}
+
+/* Large Laptops (1441px to 1600px) */
+@media only screen and (max-width: 1600px) {
+    .sks-section {
+        margin-top: -110px;
+        padding: 90px 0 140px 0;
+    }
+    .sks-image-layer {
+        right: 120px;
+        max-width: 420px;
+    }
+}
+
+/* Standard Laptops (1201px to 1440px) */
+@media only screen and (max-width: 1440px) {
+    .sks-section {
+        margin-top: -100px;
+        padding: 80px 0 120px 0;
+    }
+    .sks-sec-title h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .sks-image-layer {
+        right: 60px;
+        max-width: 380px;
+    }
+}
+
+/* Small Laptops & Large Tablets (1025px to 1200px) */
+@media only screen and (max-width: 1200px) {
+    .sks-section {
+        margin-top: -85px;
+        padding: 70px 0 100px 0;
+    }
+    .sks-sec-title h2 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .sks-image-layer {
+        right: 20px;
+        max-width: 340px;
+        bottom: 80px;
+    }
+}
+
+/* Tablets (769px to 1024px) */
+@media only screen and (max-width: 1024px) {
+    .sks-section {
+        margin-top: -70px;
+        padding: 60px 20px 80px 20px;
+        text-align: left;
+    }
+    .sks-image-layer {
+        display: none;
+    }
+    .sks-content-box {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+/* Mobile Devices (up to 768px) */
+@media only screen and (max-width: 768px) {
+    .sks-section {
+        margin-top: -50px;
+        padding: 40px 15px;
+    }
+    .sks-sec-title h2 {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+    .sks-text p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .sks-industry-item {
+        padding: 15px;
+    }
+    .sks-industry-item h5 {
+        font-size: 16px;
+    }
+    .sks-industry-desc {
+        font-size: 14px;
+        padding-left: 0;
+        margin-top: 5px;
+    }
+}
+
+/* Small Mobiles (480px and below) */
+@media only screen and (max-width: 480px) {
+    .sks-section {
+        margin-top: -40px;
+    }
+    .sks-sec-title h2 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .sks-sec-title .sks-sub-title {
+        font-size: 14px;
+    }
+}
+

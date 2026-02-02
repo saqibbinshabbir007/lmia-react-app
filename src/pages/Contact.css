@@ -1,0 +1,674 @@
+/* Contact.css - Professionally Crafted for 100% Parity */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/assets/fonts/icomoon.eot?tin97q');
+  src:  url('/assets/fonts/icomoon.eot?tin97q#iefix') format('embedded-opentype'),
+    url('/assets/fonts/icomoon.ttf?tin97q') format('truetype'),
+    url('/assets/fonts/icomoon.woff?tin97q') format('woff'),
+    url('/assets/fonts/icomoon.svg?tin97q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-61:before { content: "\e94a"; }
+.icon-62:before { content: "\e94b"; }
+.icon-63:before { content: "\e94c"; }
+
+
+.cn-contact-page {
+    position: relative;
+    width: 100%;
+}
+
+/* Page Title Section - Matching About Page Design */
+.cn-page-title {
+    padding: 174px 0px 156px 0px;
+    position: relative;
+}
+
+.cn-page-title .cn-bg-layer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cn-page-title .cn-bg-layer:before {
+    position: absolute;
+    content: '';
+    background: var(--main-color);
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    opacity: 0.8;
+}
+
+.cn-page-title .cn-content-box {
+    position: relative;
+    z-index: 2;
+}
+
+.cn-page-title .cn-content-box h1 {
+    position: relative;
+    display: block;
+    font-size: 54px;
+    line-height: 64px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.cn-page-title .cn-content-box .cn-bread-crumb {
+    position: relative;
+    display: inline-block;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 18px 50px;
+    margin-top: 37px;
+}
+
+.cn-page-title .cn-content-box .cn-bread-crumb li {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-right: 40px;
+}
+
+.cn-page-title .cn-content-box .cn-bread-crumb li:last-child {
+    margin: 0px;
+}
+
+.cn-page-title .cn-content-box .cn-bread-crumb li a {
+    display: inline-block;
+    color: var(--white-color);
+}
+
+.cn-page-title .cn-content-box .cn-bread-crumb li a:hover {
+    color: var(--secondary-color);
+}
+
+.cn-page-title .cn-content-box .cn-bread-crumb li:before {
+    position: absolute;
+    content: '\e908';
+    font-family: 'icomoon';
+    font-size: 14px;
+    top: 1px;
+    right: -28px;
+}
+
+.cn-page-title .cn-content-box .cn-bread-crumb li:last-child:before {
+    display: none;
+}
+
+.cn-page-title .cn-pattern-layer {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 826px;
+    height: 186px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* Main Contact Section */
+.cn-contact-style-two {
+    position: relative;
+    padding: 120px 0px;
+    background: #ffffff;
+}
+
+.cn-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+}
+
+.cn-column {
+    padding: 0 30px;
+    width: 50%;
+}
+
+/* Section Titles (Star & Line Style - Left Aligned) */
+.cn-sec-title {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.cn-sub-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #CE1E22;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.cn-sub-title:before {
+    position: absolute;
+    content: '';
+    background: #CE1E22;
+    width: 90px;
+    height: 1px;
+    left: 0;
+    bottom: 0px;
+    opacity: 0.3;
+}
+
+.cn-sub-title:after {
+    position: absolute;
+    content: '\e90e'; /* Star icon */
+    font-family: 'icomoon';
+    font-size: 13px;
+    background: #ffffff;
+    width: 25px;
+    text-align: center;
+    color: #CE1E22;
+    left: 32.5px; /* Centered: (90px - 25px) / 2 = 32.5px */
+    bottom: -13px;
+}
+
+.cn-sec-title h2 {
+    font-size: 44px;
+    line-height: 54px;
+    font-weight: 700;
+    color: #CE1E22;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.cn-text p {
+    font-size: 16px;
+    color: #777777;
+    line-height: 28px;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* Location Box */
+.cn-location-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #BDCBDE;
+    padding-bottom: 40px;
+}
+
+.cn-location-box .cn-icon-box {
+    font-size: 70px;
+    color: #CE1E22;
+    margin-right: 30px;
+    padding-right: 30px;
+    position: relative;
+    line-height: 1;
+}
+
+.cn-location-box .cn-icon-box:after {
+    position: absolute;
+    content: '';
+    background: #BDCBDE;
+    width: 1px;
+    height: 92px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cn-loc-info h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #CE1E22;
+    margin-bottom: 8px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.cn-loc-info p {
+    font-size: 18px;
+    color: #777777;
+    line-height: 30px;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* Info Grid */
+.cn-info-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 45px -15px 0;
+}
+
+.cn-info-col {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.cn-single-item .cn-icon-box {
+    font-size: 70px;
+    color: #CE1E22;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.cn-single-item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #CE1E22;
+    margin-bottom: 15px;
+}
+
+.cn-info-list {
+    list-style: none;
+}
+
+.cn-info-list li {
+    margin-bottom: 15px;
+}
+
+.cn-info-list li .label {
+    display: block;
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: 700;
+    color: #CE1E22;
+    font-family: 'Heebo', sans-serif;
+}
+
+.cn-info-list li p, 
+.cn-info-list li p a {
+    font-size: 18px;
+    line-height: 35px;
+    color: #777777;
+    text-decoration: none;
+}
+
+/* Form Styling */
+.cn-form-inner {
+    background: #ffffff;
+    padding: 0;
+}
+
+.cn-form-desc {
+    color: #616161 !important;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.cn-form-row {
+    display: flex;
+    margin: 0 -10px;
+}
+
+.cn-form-group {
+    width: 50%;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1; /* Default lower priority */
+}
+
+/* Ensure the field with an open dropdown is always on top */
+.cn-form-group:focus-within,
+.cn-form-group:has(.is-open) {
+    z-index: 1000;
+}
+
+.cn-form-group.full-width {
+    width: 100%;
+    padding: 0;
+}
+
+.cn-form-group input, 
+.cn-form-group textarea {
+    width: 100%;
+    background: #F7F7F7;
+    border: 1px solid #F7F7F7;
+    border-radius: 0px;
+    padding: 15px 30px;
+    font-size: 14px;
+    color: #444444;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.cn-form-group input:focus,
+.cn-form-group textarea:focus {
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.cn-form-group input {
+    height: 65px;
+}
+
+.cn-form-group textarea {
+    height: 200px;
+    padding-top: 20px;
+}
+
+/* Email Validation Styles */
+.cn-form-group.email-invalid input {
+    border: 1px solid #dc3545 !important;
+    border-radius: 5px;
+    background: #fff5f5;
+}
+
+.cn-form-group.email-valid input {
+    border: 1px solid #28a745 !important;
+    border-radius: 5px;
+    background: #f0fff4;
+}
+
+.email-error-msg {
+    display: block;
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.cn-form-group input::placeholder,
+.cn-form-group textarea::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+.cn-form-group input::-webkit-input-placeholder,
+.cn-form-group textarea::-webkit-input-placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+.cn-form-group input::-moz-placeholder,
+.cn-form-group textarea::-moz-placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+.cn-form-group input:-ms-input-placeholder,
+.cn-form-group textarea:-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+/* Searchable Dropdown Styling - FIXED UI */
+.cn-form-group.country-phone {
+    position: relative;
+}
+
+.cn-searchable-dropdown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 65px;
+    z-index: 10;
+}
+
+.cn-searchable-dropdown.is-open {
+    z-index: 99999;
+}
+
+.cn-searchable-dropdown .country-selector {
+    cursor: pointer;
+    background: transparent;
+    height: 65px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cn-searchable-dropdown .country-selector span.current-code {
+    font-size: 14px;
+    font-weight: 600;
+    color: #CE1E22;
+    margin-left: 6px;
+    margin-right: 15px;
+}
+
+.flag-img {
+    width: 18px;
+    height: 12px;
+    object-fit: cover;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.dropdown-list-wrapper {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    width: 280px;
+    background: #ffffff !important;
+    border: 1px solid #BDCBDE;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    z-index: 99999;
+    border-radius: 4px;
+    padding: 10px 0;
+    text-align: left !important; /* Force left alignment for all children */
+}
+
+/* Compact Search Input Alignment */
+.cn-searchable-dropdown .dropdown-list-wrapper .cn-search-input-v2 {
+    text-align: left !important;
+    padding: 0 12px !important;
+    margin: 0 10px 8px !important;
+    height: 35px !important;
+    display: block !important;
+    width: calc(100% - 20px) !important;
+    box-sizing: border-box !important;
+    font-size: 13px !important;
+}
+
+.cn-search-input-v2::-webkit-input-placeholder { text-align: left !important; opacity: 1; }
+.cn-search-input-v2::-moz-placeholder { text-align: left !important; opacity: 1; }
+.cn-search-input-v2:-ms-input-placeholder { text-align: left !important; opacity: 1; }
+.cn-search-input-v2::placeholder {
+    text-align: left !important;
+    opacity: 1;
+}
+
+.cn-form-group.country-phone input {
+    padding-left: 115px !important;
+}
+
+.dropdown-list {
+    max-height: 250px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ... existing scrollbar styles ... */
+.dropdown-list::-webkit-scrollbar { width: 5px; }
+.dropdown-list::-webkit-scrollbar-track { background: #f1f1f1; }
+.dropdown-list::-webkit-scrollbar-thumb { background: #CE1E22; border-radius: 10px; }
+
+.dropdown-list li {
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    transition: 0.2s;
+    color: #333;
+}
+
+.dropdown-list li img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.dropdown-list li:hover { background: #f0f4f8; }
+.dropdown-list li.selected { background: #CE1E22; color: #ffffff; }
+
+.cn-form-group.country-phone input {
+    padding-left: 105px !important;
+}
+
+@media (max-width: 767px) {
+    .cn-form-group.country-phone input {
+        padding-left: 105px !important;
+    }
+}
+
+/* Custom Checkbox */
+.cn-custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #777777;
+    user-select: none;
+}
+
+.cn-custom-checkbox input {
+    display: none;
+}
+
+.checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    margin-right: 15px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.cn-custom-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.cn-custom-checkbox input:checked ~ .checkmark {
+    background-color: #CE1E22;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.cn-custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.cn-custom-checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Submit Button */
+.cn-submit-btn {
+    background: #CE1E22;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cn-submit-btn:hover {
+    background: #a0171a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(206, 30, 34, 0.3);
+}
+
+.cn-submit-btn span {
+    font-size: 20px;
+}
+
+/* Map Section */
+.cn-map-section {
+    padding-bottom: 120px;
+}
+
+.cn-map-inner {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- PROFESSIONAL RESPONSIVENESS (FULLY OPTIMIZED) --- */
+
+@media (max-width: 1400px) {
+    .auto-container { padding: 0 40px; }
+}
+
+@media (max-width: 1200px) {
+    .cn-sec-title h2 { font-size: 38px; line-height: 48px; }
+    .cn-column { padding: 0 20px; }
+}
+
+@media (max-width: 991px) {
+    .cn-contact-style-two { padding: 80px 0; }
+    .cn-column { width: 100%; margin-bottom: 50px; }
+    .cn-column:last-child { margin-bottom: 0; }
+    .cn-page-title { padding: 120px 0px 100px 0px; }
+    .cn-page-title .cn-content-box h1 { font-size: 42px; line-height: 52px; }
+    .cn-page-title .cn-pattern-layer { display: none !important; }
+    .cn-map-section { padding-bottom: 80px; }
+}
+
+@media (max-width: 767px) {
+    .cn-page-title { padding: 80px 0px 70px 0px; }
+    .cn-page-title .cn-content-box h1 { font-size: 32px; line-height: 42px; }
+    .cn-bread-crumb li { font-size: 16px; }
+    .cn-sec-title h2 { font-size: 28px; line-height: 38px; }
+    
+    .cn-form-row { flex-direction: column; margin: 0; }
+    .cn-form-group { width: 100% !important; padding: 0; margin-bottom: 20px; }
+    
+    .cn-location-box { flex-direction: column; text-align: center; padding-top: 20px; }
+    .cn-location-box .cn-icon-box { margin: 0 0 20px 0; padding-right: 0; font-size: 60px; }
+    .cn-location-box .cn-icon-box:after { display: none; }
+    
+    .cn-info-row { margin-top: 30px; }
+    .cn-info-col { width: 100%; padding: 0; margin-bottom: 30px; }
+    .cn-single-item { text-align: center; }
+    .cn-info-list li .label { font-size: 16px; }
+    .cn-info-list li p, .cn-info-list li p a { font-size: 16px; }
+
+    .dropdown-list-wrapper { width: calc(100vw - 60px); max-width: 300px; left: 0; }
+    .cn-submit-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .cn-page-title { padding: 60px 0px 50px 0px; }
+    .cn-page-title .cn-content-box h1 { font-size: 28px; line-height: 38px; }
+    .cn-sec-title h2 { font-size: 24px; line-height: 34px; }
+    .cn-searchable-dropdown { width: 90px; }
+    .cn-form-group.country-phone input { padding-left: 100px !important; }
+}
+

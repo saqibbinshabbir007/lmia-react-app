@@ -1,0 +1,310 @@
+/* Education Section Component Styles - Prefixed with eds- */
+
+.eds-section {
+    position: relative;
+    padding: 140px 0px; /* Slight increase for breathing room */
+    overflow: hidden;
+    background-color: #CE1E22; /* Updated to Red Theme */
+}
+
+/* Base Overlay */
+.eds-section:before {
+    position: absolute;
+    content: '';
+    background: #CE1E22; /* Red Theme */
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    opacity: 0.7; /* Lower opacity so background movement is clearly visible */
+    z-index: 1;
+}
+
+/* Background Animated Layer (Landmarks) */
+.eds-bg-layer-2 {
+    position: absolute;
+    left: 0px;
+    bottom: -25px; /* Aligned to bottom */
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-position: bottom center; /* Force image to stay at bottom */
+    animation: eds-slide 60s linear infinite;
+    -webkit-animation: eds-slide 60s linear infinite;
+    z-index: 1;
+}
+
+/* Parallax-style background */
+.eds-parallax-bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 120%; /* Extra height for parallax effect */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+    transform: translateY(-5%); /* Initial position */
+}
+
+/* Floating Person Image */
+.eds-image-layer {
+    position: absolute;
+    right: 15%; /* Adjusted for better visibility */
+    bottom: 0px;
+    z-index: 2;
+    max-width: 460px; /* Bumped from 430px */
+}
+
+.eds-image-layer img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Shape Decorations */
+.eds-shape-2 {
+    position: absolute;
+    bottom: 0px;
+    right: 40%;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    animation: eds-zoom-fade 6s infinite linear;
+    -webkit-animation: eds-zoom-fade 6s infinite linear;
+    z-index: 1;
+}
+
+/* Content Box */
+.eds-content-box {
+    position: relative;
+    max-width: 550px;
+    z-index: 3;
+}
+
+.eds-content-box h2 {
+    display: block;
+    font-size: 44px; /* Matches ref better */
+    line-height: 54px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Hollow text effect for span */
+.eds-content-box h2 span {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.eds-content-box p {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 35px;
+    max-width: 480px; /* Constrain width like in ref */
+}
+
+/* Country Flags List */
+.eds-country-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px; /* Slightly tighter like ref */
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.eds-country-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.eds-country-list .eds-flag {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.eds-country-list .eds-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.eds-country-list span {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Animations */
+@keyframes eds-slide {
+    from { background-position: 0 0; }
+    to { background-position: 1920px 0; }
+}
+
+@keyframes eds-zoom-fade {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+/* ==========================================================================
+   Responsive Styles for Education Section
+   ========================================================================== */
+
+/* Large Laptops (1441px to 1600px) */
+@media only screen and (max-width: 1600px) {
+    .eds-section {
+        padding: 160px 0;
+    }
+    .eds-image-layer {
+        right: 10%;
+        max-width: 450px;
+    }
+}
+
+/* Standard Laptops (1201px to 1440px) */
+@media only screen and (max-width: 1440px) {
+    .eds-section {
+        padding: 140px 0;
+    }
+    .eds-content-box h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .eds-image-layer {
+        right: 5%;
+        max-width: 400px;
+    }
+}
+
+/* Small Laptops & Large Tablets (1025px to 1200px) */
+@media only screen and (max-width: 1200px) {
+    .eds-section {
+        padding: 120px 0;
+    }
+    .eds-content-box {
+        max-width: 500px;
+    }
+    .eds-content-box h2 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .eds-image-layer {
+        right: 2%;
+        max-width: 350px;
+        bottom: -20px;
+    }
+}
+
+/* Tablets (769px to 1024px) */
+@media only screen and (max-width: 1024px) {
+    .eds-section {
+        padding: 100px 0 80px 0;
+        text-align: left; /* Changed from center to left */
+    }
+    .eds-content-box {
+        max-width: 700px;
+        margin: 0; /* Align to the left instead of center */
+    }
+    .eds-content-box p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .eds-image-layer {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 40px 0 0 0; /* Changed from auto to 0 */
+        max-width: 300px;
+        display: block;
+        z-index: 2;
+    }
+    .eds-country-list {
+        justify-content: flex-start; /* Changed from center */
+    }
+    .eds-bg-layer-2 {
+        bottom: -10px;
+        opacity: 0.3; /* Fade landmarks slightly on mobile/tablet */
+    }
+}
+
+/* Small Tablets & Mobile Landscape (600px to 768px) */
+@media only screen and (max-width: 768px) {
+    .eds-section {
+        padding: 80px 15px;
+    }
+    .eds-content-box h2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .eds-content-box p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+    .eds-image-layer {
+        max-width: 250px;
+    }
+    .eds-country-list {
+        gap: 20px;
+    }
+}
+
+/* Mobile Portrait (up to 599px) */
+@media only screen and (max-width: 600px) {
+    .eds-section {
+        padding: 60px 15px;
+    }
+    .eds-content-box h2 {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 15px;
+    }
+    .eds-content-box p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .eds-country-list .eds-flag {
+        width: 65px;
+        height: 65px;
+    }
+    .eds-image-layer {
+        max-width: 220px;
+        margin-top: 30px;
+    }
+}
+
+/* Very Small Devices (375px and below) */
+@media only screen and (max-width: 375px) {
+    .eds-content-box h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .eds-country-list .eds-flag {
+        width: 55px;
+        height: 55px;
+    }
+}
+
